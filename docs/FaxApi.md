@@ -28,7 +28,7 @@ api_key = "api_key_example" # String | API Key
 
 fax_number = "fax_number_example" # String | Fax Number
 
-document_id = 3.4 # Float | id of the file / document_id
+document_id = 1 # Integer | id of the file / document_id
 
 
 begin
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **api_key** | **String**| API Key | 
  **fax_number** | **String**| Fax Number | 
- **document_id** | **Float**| id of the file / document_id | 
+ **document_id** | **Integer**| id of the file / document_id | 
 
 ### Return type
 
