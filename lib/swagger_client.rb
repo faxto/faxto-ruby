@@ -21,8 +21,10 @@ require 'swagger_client/models/file'
 
 # APIs
 require 'swagger_client/api/account_api'
+require 'swagger_client/api/country_api'
 require 'swagger_client/api/fax_api'
 require 'swagger_client/api/files_api'
+require 'swagger_client/api/number_api'
 
 module SwaggerClient
   class << self

@@ -46,7 +46,7 @@ describe 'FaxApi' do
     end
   end
 
-  # unit tests for fax_history_get
+  # unit tests for fax_get
   # 
   # This API get all fax history. 
   # @param api_key API Key
@@ -54,7 +54,7 @@ describe 'FaxApi' do
   # @option opts [String] :limit Number of records to return
   # @option opts [String] :page Page to display
   # @return [nil]
-  describe 'fax_history_get test' do
+  describe 'fax_get test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -73,18 +73,39 @@ describe 'FaxApi' do
     end
   end
 
-  # unit tests for fax_post
+  # unit tests for incoming_faxes_get
   # 
-  # This API send the fax. When we send fax using API, Fax.to send a POST to the Callback URL you specified in https://fax.to/member/api/live. Fax.to send POST data with the following information fax_job_id, status and message. 
+  # This API get faxes . 
   # @param api_key API Key
-  # @param fax_number Fax Number
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :document_id Document id. If you want to use existing document you need to specify the document_id
-  # @option opts [String] :tsi_number If we want to to change the text or number that appear on &#39;from&#39; or &#39;sender&#39; of the fax
-  # @option opts [File] :file PDF file to upload
-  # @option opts [Integer] :delete_file Whether to delete file after fax transaction. (put 1 to delete)
   # @return [nil]
-  describe 'fax_post test' do
+  describe 'incoming_faxes_get test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for incoming_faxes_number_get
+  # 
+  # This API get faxes  by number. 
+  # @param api_key API Key
+  # @param number Number in the fax
+  # @param [Hash] opts the optional parameters
+  # @return [nil]
+  describe 'incoming_faxes_number_get test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for provision_numbers_get
+  # 
+  # This API get Provision numbers. 
+  # @param api_key API Key
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :limit Limit to display
+  # @return [nil]
+  describe 'provision_numbers_get test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

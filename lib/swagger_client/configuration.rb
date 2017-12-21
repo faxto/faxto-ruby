@@ -130,7 +130,7 @@ module SwaggerClient
     def initialize
       @scheme = 'https'
       @host = 'fax.to'
-      @base_path = '/api/v1'
+      @base_path = '/api/v2'
       @api_key = {}
       @api_key_prefix = {}
       @timeout = 0

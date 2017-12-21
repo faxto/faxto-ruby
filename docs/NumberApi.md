@@ -1,33 +1,36 @@
-# SwaggerClient::AccountApi
+# SwaggerClient::NumberApi
 
 All URIs are relative to *https://fax.to/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**balance_get**](AccountApi.md#balance_get) | **GET** /balance | 
+[**numbers_get**](NumberApi.md#numbers_get) | **GET** /numbers | 
 
 
-# **balance_get**
-> balance_get(api_key)
+# **numbers_get**
+> numbers_get(api_key, opts)
 
 
 
-This API get users balance. 
+This API get users numbers. 
 
 ### Example
 ```ruby
 # load the gem
 require 'swagger_client'
 
-api_instance = SwaggerClient::AccountApi.new
+api_instance = SwaggerClient::NumberApi.new
 
 api_key = "api_key_example" # String | API Key
 
+opts = { 
+  page: "page_example" # String | Page to display
+}
 
 begin
-  api_instance.balance_get(api_key)
+  api_instance.numbers_get(api_key, opts)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AccountApi->balance_get: #{e}"
+  puts "Exception when calling NumberApi->numbers_get: #{e}"
 end
 ```
 
@@ -36,6 +39,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **api_key** | **String**| API Key | 
+ **page** | **String**| Page to display | [optional] 
 
 ### Return type
 
