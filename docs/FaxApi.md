@@ -28,7 +28,7 @@ api_key = "api_key_example" # String | API Key
 
 fax_number = "fax_number_example" # String | Fax Number
 
-document_id = 1 # Integer | id of the file / document_id
+document_id = 3.4 # Float | id of the file / document_id
 
 
 begin
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **api_key** | **String**| API Key | 
  **fax_number** | **String**| Fax Number | 
- **document_id** | **Integer**| id of the file / document_id | 
+ **document_id** | **Float**| id of the file / document_id | 
 
 ### Return type
 
@@ -165,7 +165,7 @@ No authorization required
 
 
 
-This API send the fax. When we send fax using API, Fax.to send a POST to the Callback URL you specified in https://fax.to/member/api/live. Fax.to send data POST data with the following information fax_job_id, status and message. 
+This API send the fax. When we send fax using API, Fax.to send a POST to the Callback URL you specified in https://fax.to/member/api/live. Fax.to send POST data with the following information fax_job_id, status and message. 
 
 ### Example
 ```ruby
@@ -180,6 +180,7 @@ fax_number = "fax_number_example" # String | Fax Number
 
 opts = { 
   document_id: 56, # Integer | Document id. If you want to use existing document you need to specify the document_id
+  tsi_number: "tsi_number_example", # String | If we want to to change the text or number that appear on 'from' or 'sender' of the fax
   file: File.new("/path/to/file.txt"), # File | PDF file to upload
   delete_file: 56 # Integer | Whether to delete file after fax transaction. (put 1 to delete)
 }
@@ -198,6 +199,7 @@ Name | Type | Description  | Notes
  **api_key** | **String**| API Key | 
  **fax_number** | **String**| Fax Number | 
  **document_id** | **Integer**| Document id. If you want to use existing document you need to specify the document_id | [optional] 
+ **tsi_number** | **String**| If we want to to change the text or number that appear on &#39;from&#39; or &#39;sender&#39; of the fax | [optional] 
  **file** | **File**| PDF file to upload | [optional] 
  **delete_file** | **Integer**| Whether to delete file after fax transaction. (put 1 to delete) | [optional] 
 
