@@ -13,7 +13,7 @@ Swagger Codegen version: 2.2.3
 require "uri"
 
 module SwaggerClient
-  class AccountApi
+  class NumberApi
     attr_accessor :api_client
 
     def initialize(api_client = ApiClient.default)
@@ -21,34 +21,37 @@ module SwaggerClient
     end
 
     # 
-    # This API get users balance. 
+    # This API get users numbers. 
     # @param api_key API Key
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :page Page to display
     # @return [nil]
-    def balance_get(api_key, opts = {})
-      balance_get_with_http_info(api_key, opts)
+    def numbers_get(api_key, opts = {})
+      numbers_get_with_http_info(api_key, opts)
       return nil
     end
 
     # 
-    # This API get users balance. 
+    # This API get users numbers. 
     # @param api_key API Key
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :page Page to display
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def balance_get_with_http_info(api_key, opts = {})
+    def numbers_get_with_http_info(api_key, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: AccountApi.balance_get ..."
+        @api_client.config.logger.debug "Calling API: NumberApi.numbers_get ..."
       end
       # verify the required parameter 'api_key' is set
       if @api_client.config.client_side_validation && api_key.nil?
-        fail ArgumentError, "Missing the required parameter 'api_key' when calling AccountApi.balance_get"
+        fail ArgumentError, "Missing the required parameter 'api_key' when calling NumberApi.numbers_get"
       end
       # resource path
-      local_var_path = "/balance"
+      local_var_path = "/numbers"
 
       # query parameters
       query_params = {}
       query_params[:'api_key'] = api_key
+      query_params[:'page'] = opts[:'page'] if !opts[:'page'].nil?
 
       # header parameters
       header_params = {}
@@ -66,7 +69,7 @@ module SwaggerClient
         :body => post_body,
         :auth_names => auth_names)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AccountApi#balance_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: NumberApi#numbers_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
